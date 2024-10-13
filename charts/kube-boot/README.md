@@ -8,6 +8,7 @@ A common Helm chart for Spring boot application
 
 * <https://spring.io/projects/spring-boot>
 * <https://github.com/olehrgf/helm-charts>
+* <https://github.com/borntoprogram/helm-charts>
 
 ## Values
 

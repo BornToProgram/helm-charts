@@ -4,9 +4,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "spring-boot-microservice.fullname" $ }}
+  name: {{ include "kube-boot.fullname" $ }}
   labels:
-  {{- include "spring-boot-microservice.labels" $ | nindent 4 }}
+  {{- include "kube-boot.labels" $ | nindent 4 }}
   {{- if .labels }}
   {{- toYaml .labels | nindent 4 }}
   {{- end }}
@@ -28,6 +28,6 @@ spec:
       nodePort: {{ .managementNodePort }}
   {{- end }}
   selector:
-  {{- include "spring-boot-microservice.selectorLabels" $ | nindent 4 }}
+  {{- include "kube-boot.selectorLabels" $ | nindent 4 }}
 {{- end }}
 {{- end }}

@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "spring-boot-microservice.fullname" . }}
+  name: {{ include "kube-boot.fullname" . }}
   labels:
-    {{- include "spring-boot-microservice.labels" . | nindent 4 }}
+    {{- include "kube-boot.labels" . | nindent 4 }}
     {{- if .Values.labels }}
       {{- toYaml .Values.labels | nindent 4 }}
     {{- end }}
@@ -17,7 +17,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "spring-boot-microservice.selectorLabels" . | nindent 6 }}
+      {{- include "kube-boot.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
@@ -26,7 +26,7 @@ spec:
           {{- toYaml .Values.podAnnotations | nindent 8 }}
         {{- end }}
       labels:
-        {{- include "spring-boot-microservice.selectorLabels" . | nindent 8 }}
+        {{- include "kube-boot.selectorLabels" . | nindent 8 }}
         {{- if .Values.podLabels }}
         {{- toYaml .Values.podLabels | nindent 8 }}
         {{- end }}
@@ -36,7 +36,7 @@ spec:
       imagePullSecrets:
       {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "spring-boot-microservice.serviceAccountName" . }}
+      serviceAccountName: {{ include "kube-boot.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.securityContext | nindent 8 }}
       containers:
@@ -134,13 +134,13 @@ spec:
       volumes:
         - name: logging
           configMap:
-            name: {{ include "spring-boot-microservice.fullname" . }}
+            name: {{ include "kube-boot.fullname" . }}
             items:
               - key: "logging.yaml"
                 path: logging.yaml
         - name: application
           configMap:
-            name: {{ include "spring-boot-microservice.fullname" . }}
+            name: {{ include "kube-boot.fullname" . }}
             items:
               - key: "application.yaml"
                 path: application.yaml
