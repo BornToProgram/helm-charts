@@ -1,6 +1,10 @@
 apiVersion: v2
 name: kube-boot
 description: A Helm chart for Kubernetes
+annotations:
+  artifacthub.io/changes: |
+    - kind: Added
+      description: New feature for secret management, new and easy configuration handling
 sources:
   - https://github.com/BornToProgram/helm-charts
 
