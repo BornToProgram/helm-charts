@@ -2,16 +2,13 @@ bases:
   - ../environments/release_environment.yaml
 ---
 bases:
-  - ../gotmpl/helmfile.gotmpl
----
-bases:
   - ../templates/release_template.yaml
 ---
 
 helmDefaults:
-  kubeContext: "Docker-Desktop"
+  kubeContext: "docker-desktop"
 
-release:
+releases:
   - name: kube-boot
     chart: ./kube-boot
     inherit:

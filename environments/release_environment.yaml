@@ -1,0 +1,6 @@
+environments:
+  default:
+    values:
+      - ../vars/values.yaml
+    secrets:
+      - ../vars/secrets.yaml

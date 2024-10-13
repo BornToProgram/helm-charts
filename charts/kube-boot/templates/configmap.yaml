@@ -1,22 +1,9 @@
+# templates/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ include "kube-boot.fullname" . }}
   labels:
-  {{- include "kube-boot.labels" . | nindent 4 }}
-  {{- if .Values.config.labels }}
-  {{- toYaml .Values.config.labels | nindent 4 }}
-  {{- end }}
-  {{- if .Values.config.annotations }}
-  annotations:
-    {{- toYaml .Values.config.annotations | nindent 4 }}
-  {{- end }}
+    {{- include "kube-boot.labels" . | nindent 4 }}
 data:
-  {{- with .Values.config.log4j }}
-  logging.yaml: >-
-    {{- tpl . $ | nindent 4 }}
-    {{- end }}
-  {{- with .Values.config.application }}
-  application.yaml: >-
-    {{- tpl . $ | nindent 4 }}
-  {{- end }}
+  {{- toYaml .Values.properties | nindent 4 }}

@@ -1,33 +1,15 @@
-{{- with .Values.service }}
-  {{- if .enabled }}
----
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "kube-boot.fullname" $ }}
+  name: {{ include "kube-boot.fullname" . }}
   labels:
-  {{- include "kube-boot.labels" $ | nindent 4 }}
-  {{- if .labels }}
-  {{- toYaml .labels | nindent 4 }}
-  {{- end }}
+    {{- include "kube-boot.labels" . | nindent 4 }}
 spec:
-  type: {{ .type }}
+  type: {{ .Values.service.type }}
   ports:
-    - port: {{ .httpPort }}
+    - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
       name: http
-      {{- if and (eq "NodePort" .type) .httpNodePort }}
-      nodePort: {{ .httpNodePort }}
-    {{- end }}
-    - port: {{ .managementPort }}
-      targetPort: http-management
-      protocol: TCP
-      name: http-management
-      {{- if and (eq "NodePort" .type) .managementNodePort }}
-      nodePort: {{ .managementNodePort }}
-  {{- end }}
   selector:
-  {{- include "kube-boot.selectorLabels" $ | nindent 4 }}
-{{- end }}
-{{- end }}
+    {{- include "kube-boot.selectorLabels" . | nindent 4 }}

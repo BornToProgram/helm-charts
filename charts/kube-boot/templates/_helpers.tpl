@@ -36,8 +36,8 @@ Common labels
 {{- define "kube-boot.labels" -}}
 helm.sh/chart: {{ include "kube-boot.chart" . }}
 {{ include "kube-boot.selectorLabels" . }}
-{{- if .Values.appVersion }}
-app.kubernetes.io/version: {{ .Values.appVersion | quote }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
@@ -59,11 +59,4 @@ Create the name of the service account to use
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
-{{- end }}
-
-{{/*
-Create the DNS name of the service
-*/}}
-{{- define "kube-boot.serviceDns" -}}
-{{- printf "%s.%s.svc.cluster.local" (include "kube-boot.fullname" .) .Release.Namespace }}
 {{- end }}
