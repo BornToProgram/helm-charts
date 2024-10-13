@@ -1,3 +1,5 @@
 .idea
+.sops.yaml
 config
 vars
+
