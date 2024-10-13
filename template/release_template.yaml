@@ -1,0 +1,8 @@
+templates:
+  release:
+    namespace: {{ .StateValues | get "shared.namespace" "default" }}
+    missingFileHandler: {{ .StateValues | get "shared.missingFileHandler" "Warn" }}
+    values:
+      - ../config/{{`{{ .Release.Name }}`}}/values.yaml
+    secrets:
+      - ../config/{{`{{ .Release.Name }}`}}/secrets.yaml

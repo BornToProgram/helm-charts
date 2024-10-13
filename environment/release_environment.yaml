@@ -1,0 +1,13 @@
+environments:
+  default:
+    values:
+      - ../vars/values.yaml
+    secrets:
+      - ../vars/secrets.yaml
+  dev:
+    values:
+      - ../vars/values.yaml
+      - ../vars/dev_values.yaml
+    secrets:
+      - ../vars/secrets.yaml
+      - ../vars/dev_secrets.yaml
