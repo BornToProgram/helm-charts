@@ -1,0 +1,19 @@
+annotations:
+  artifacthub.io/changes: |
+    - kind: Feature
+      description: new Feature for secret management
+apiVersion: v2
+appVersion: 0.0.1
+description: A common Helm chart for Spring boot application including secret management for helm secrets and sealed secrets
+keywords:
+- spring
+- spring boot
+- java
+- microservice
+name: kube-boot
+sources:
+- https://spring.io/projects/spring-boot
+- https://github.com/olehrgf/helm-charts
+- https://github.com/borntoprogram/helm-charts
+type: application
+version: 1.0.0
