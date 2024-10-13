@@ -3,14 +3,14 @@ entries:
   kube-boot:
   - annotations:
       artifacthub.io/changes: |
-        - kind: Feature
+        - kind: Added
           description: new Feature for secret management
     apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-10-13T16:23:01.7782268+02:00"
+    created: "2024-10-13T18:25:05.1450133+02:00"
     description: A common Helm chart for Spring boot application including secret
       management for helm secrets and sealed secrets
-    digest: b9b6b914a9d5a40ab82bf87270c147fa78226fa4242b12030b03871366505bc9
+    digest: 332eefe6e815c167b445aeded3b9b7023726069e1caec86b7f15b6a8e8dd2b7f
     keywords:
     - spring
     - spring boot
@@ -23,6 +23,6 @@ entries:
     - https://github.com/borntoprogram/helm-charts
     type: application
     urls:
-    - kube-boot-1.0.0.tgz
-    version: 1.0.0
-generated: "2024-10-13T16:23:01.7343953+02:00"
+    - kube-boot-1.1.0.tgz
+    version: 1.1.0
+generated: "2024-10-13T18:25:05.1379222+02:00"
