@@ -1,6 +1,6 @@
 annotations:
   artifacthub.io/changes: |
-    - kind: Feature
+    - kind: Added
       description: new Feature for secret management
 apiVersion: v2
 appVersion: 0.0.1
@@ -16,4 +16,4 @@ sources:
 - https://github.com/olehrgf/helm-charts
 - https://github.com/borntoprogram/helm-charts
 type: application
-version: 1.0.0
+version: 1.1.0
