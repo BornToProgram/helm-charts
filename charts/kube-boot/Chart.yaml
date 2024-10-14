@@ -4,7 +4,7 @@ description: A Helm chart for Kubernetes
 annotations:
   artifacthub.io/changes: |
     - kind: Added
-      description: New feature for secret management, new and easy configuration handling
+      description: New feature for secret management, new and easy configuration handling, kubeseal (experimental)
 sources:
   - https://github.com/BornToProgram/helm-charts
 
