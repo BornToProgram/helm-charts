@@ -7,9 +7,9 @@ entries:
           description: New feature for secret management, new and easy configuration handling, kubeseal (experimental)
     apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
-    created: "2024-10-14T11:17:44.7407803+02:00"
+    created: "2024-10-14T11:49:58.1865204+02:00"
     description: A Helm chart for Kubernetes
-    digest: 04364d04d3d496a09ba2cdfc4b73fda28c56ae782c8a1d9c25298e75d4ce6284
+    digest: 861ab0ef697216a508d4fcde18fb7a70819f9fd99e73e82afb1ad682cc47ae11
     name: kube-boot
     sources:
     - https://github.com/BornToProgram/helm-charts
@@ -17,4 +17,4 @@ entries:
     urls:
     - kube-boot-1.0.0.tgz
     version: 1.0.0
-generated: "2024-10-14T11:17:44.7365056+02:00"
+generated: "2024-10-14T11:49:58.1806582+02:00"
