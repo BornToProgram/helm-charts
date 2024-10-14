@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: kube-boot
+  repository: amazoncorretto
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "17"
 
 imagePullSecrets: []
 nameOverride: ""
