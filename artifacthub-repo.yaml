@@ -9,7 +9,6 @@
 # when the hash of the last commit in the branch you set up changes. This does
 # NOT apply to ownership claim operations, which are processed immediately.
 #
-repositoryID: 4089bb96-5ed4-4a15-81fc-4e1fc9b0dadb
 owners:
   - name: borntoprogram96
     email: borntoprogram96@gmail.com
