@@ -16,4 +16,4 @@ Run the following steps to add the Helm repository:
 
 ```bash
 helm repo add kube-boot https://borntoprogram.github.io/helm-charts/
-helm install my-kube-boot kube-boot/kube-boot --version 1.0.0
+helm install my-kube-boot kube-boot/kube-boot --version 1.0.1
