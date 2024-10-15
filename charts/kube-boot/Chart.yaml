@@ -3,7 +3,8 @@ name: kube-boot
 description: A Helm chart for Kubernetes
 annotations:
   artifacthub.io/changes: |
-      - kubeseal (experimental), bugfix kubeseal create option added
+      - kind: fixed
+        description: kubeseal (experimental), bugfix kubeseal create option added
 sources:
   - https://github.com/BornToProgram/helm-charts
 
