@@ -61,7 +61,7 @@ spec:
                 name: {{ include "kube-boot.fullname" . }}
             - secretRef:
                 name: {{ include "kube-boot.fullname" . }}
-            {{- if .Values.sealedSecrets }}
+            {{- if .Values.sealedSecrets.create }}
             - secretRef:
                 name: sealed-{{ include "kube-boot.fullname" . }}
             {{- end }}

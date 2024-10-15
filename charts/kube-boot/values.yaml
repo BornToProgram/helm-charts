@@ -66,7 +66,9 @@ properties: {}
 secrets: {}
   # PASSWORD:  ENC[AES256_GCM,data:0GWeLbFgcnBFniCiVSStD8rJ/ ENC[AES256_GCM,data:0GWeLbFgcnBFniCiVSStD8rJ/....]
 
-sealedSecrets: {}
+sealedSecrets:
+  create: false
+  secrets: {}
   # Password (encrypted):
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
