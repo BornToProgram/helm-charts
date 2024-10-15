@@ -3,18 +3,18 @@ entries:
   kube-boot:
   - annotations:
       artifacthub.io/changes: |
-        - kind: Added
-          description: New feature for secret management, new and easy configuration handling, kubeseal (experimental)
+        - kind: BugFix
+          description: kubeseal (experimental), bugfix kubeseal create option added
     apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
-    created: "2024-10-14T11:49:58.1865204+02:00"
+    created: "2024-10-15T12:06:05.2169624+02:00"
     description: A Helm chart for Kubernetes
-    digest: 861ab0ef697216a508d4fcde18fb7a70819f9fd99e73e82afb1ad682cc47ae11
+    digest: 9c91eae2dd8ec475751a9192e064b28b49202ce45066745d66fc877414f5ae89
     name: kube-boot
     sources:
     - https://github.com/BornToProgram/helm-charts
     type: application
     urls:
-    - kube-boot-1.0.0.tgz
-    version: 1.0.0
-generated: "2024-10-14T11:49:58.1806582+02:00"
+    - kube-boot-1.0.1.tgz
+    version: 1.0.1
+generated: "2024-10-15T12:06:05.2143957+02:00"
