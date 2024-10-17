@@ -4,7 +4,7 @@ description: A Helm chart for Kubernetes
 annotations:
   artifacthub.io/changes: |
       - kind: fixed
-        description: kubeseal (experimental), bugfix kubeseal create option added
+        description: bugfix image repository
 sources:
   - https://github.com/BornToProgram/helm-charts
 
