@@ -1,20 +1,3 @@
 apiVersion: v1
-entries:
-  kube-boot:
-  - annotations:
-      artifacthub.io/changes: |
-        - kind: fixed
-          description: bugfix image repository
-    apiVersion: v2
-    appVersion: 1.0.0-SNAPSHOT
-    created: "2024-10-17T17:23:42.2375082+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 8c01badf563351410550632b5b53788db33875d1ec6fc415c3e65afd0558064c
-    name: kube-boot
-    sources:
-    - https://github.com/BornToProgram/helm-charts
-    type: application
-    urls:
-    - kube-boot-1.0.1.tgz
-    version: 1.0.1
-generated: "2024-10-17T17:23:42.2342827+02:00"
+entries: {}
+generated: "2024-12-03T23:51:31.6313962+01:00"
