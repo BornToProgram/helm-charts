@@ -8,7 +8,7 @@ image:
   repository: "eclipse-temurin"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "21"
+  tag: "21.0.0-jre"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -70,6 +70,24 @@ sealedSecrets:
   create: false
   secrets: {}
   # Password (encrypted):
+
+certManager:
+  http01:
+    enabled: false
+    ingressClassName: nginx
+  dns01:
+    enabled: false
+    dnsZones:
+      - "example.com"
+    provider: "route53"
+    region: "us-east-1"
+    hostedZoneId: {} # e.g. HDADEMD12HD
+
+  name: "01-production"
+  server: "https://acme-v02.api.letsencrypt.org/directory"
+  email: "youremail@web.com"
+  privateKeySecretRef: "01-production-cluster-issuer"
+
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
