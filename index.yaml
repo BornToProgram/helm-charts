@@ -1,3 +1,22 @@
 apiVersion: v1
-entries: {}
-generated: "2024-12-04T11:15:39.7153148+01:00"
+entries:
+  kube-boot:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Improved configurability of Cert-Manager for HTTP01 and DNS01
+        - kind: fixed
+          description: Bugfix im Image Repository
+    apiVersion: v2
+    appVersion: 1.0.0-SNAPSHOT
+    created: "2024-12-04T11:25:58.8767478+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 5f0077303dfd92f96eedc3d145d13f83b1fb7a7b5a3abb899341b81c5e63f534
+    name: kube-boot
+    sources:
+    - https://github.com/BornToProgram/helm-charts
+    type: application
+    urls:
+    - https://borntoprogram.github.io/helm-charts/kube-boot/kube-boot-1.1.2.tgz
+    version: 1.1.2
+generated: "2024-12-04T11:25:58.8716679+01:00"
