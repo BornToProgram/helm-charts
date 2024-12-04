@@ -17,6 +17,6 @@ entries:
     - https://github.com/BornToProgram/helm-charts
     type: application
     urls:
-    - https://borntoprogram.github.io/helm-charts/kube-boot/kube-boot-1.1.2.tgz
+    - https://borntoprogram.github.io/helm-charts/kube-boot-1.1.2.tgz
     version: 1.1.2
 generated: "2024-12-04T11:25:58.8716679+01:00"
