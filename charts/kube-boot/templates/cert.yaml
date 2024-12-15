@@ -1,6 +1,10 @@
-{{- if .Values.certManager.dns01.enabled }}
+{{- if .Values.certManager.enabled }}
 apiVersion: cert-manager.io/v1
+{{- if eq .Values.certManager.scope "ClusterIssuer"}}
 kind: ClusterIssuer
+{{- else }}
+kind: Issuer
+{{- end }}
 metadata:
   name: {{ .Values.certManager.name }}
 spec:
@@ -10,6 +14,7 @@ spec:
     privateKeySecretRef:
       name: {{ .Values.certManager.privateKeySecretRef }}
     solvers:
+      {{- if .Values.certManager.dns01.enabled }}
       - selector:
           dnsZones:
             {{ .Values.certManager.dns01.dnsZones }}
@@ -19,6 +24,12 @@ spec:
             region: {{ .Values.certManager.dns01.region }}
             hostedZoneID: {{ .Values.certManager.dns01.hostedZoneId }}
           {{- else }}
-            {{- fail "Unsupported DNS provider specified in values.yaml. supported provider are: route53" }}
+            {{- fail "Unsupported DNS provider specified in values.yaml. Supported provider is: route53" }}
           {{- end }}
+      {{- end }}
+      {{- if .Values.certManager.http01.enabled }}
+      - http01:
+          ingress:
+            ingressClassName: {{ .Values.certManager.http01.ingressClassName }}
+      {{- end }}
 {{- end }}
