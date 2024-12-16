@@ -1,6 +1,6 @@
 # Purpose of this helm chart
 
-This Helm chart was created to address the lack of simple, configurable charts that include built-in secret management or plugin management options in general. Its primary goal is to facilitate the development of a new load-testing instrumentation using OpenTelemetry and Gatling within a Kubernetes environment.
+This Helm chart was created to address the lack of simple, configurable charts for spring boot applications.
 ## Prerequisites
 
 - Helm (version 3.x or later)
